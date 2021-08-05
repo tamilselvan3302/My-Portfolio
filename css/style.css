@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+/* navbar styling */
+.navbar
+{  position: fixed;
+    width: 100%;
+    /* padding: 15px 0; */
+    padding: 30px 0;
+   /* background: #3e0e12; crimson; */
+   font-family: "Ubuntu",sans-serif;
+   transition: all 0.3s ease;
+}
+.navbar.stickly
+{
+    padding: 15px 0;
+    background: #3e0e12; crimson;
+}
+
+.navbar .max-width
+{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.navbar .logo a
+{   color: #fff;
+   font-size: 35px;
+   font-weight: 600;
+}
+.navbar .logo a span
+{   color: crimson;
+   
+}
+.navbar.stickly .logo a span
+{   transition: all 0.3s ease;
+    color: #fff;
+    font-weight: 600;
+}
+.navbar .menu  li
+{
+    list-style: none;
+    display: inline;
+}
+.navbar .menu  li a 
+{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu  li a:hover
+{
+   color:crimson ;
+}
+
+.navbar.stickly .menu  li a:hover
+{   transition: all 0.3s ease;
+    color: #fff;
+}
+/* menu btn styling */
+
+.menu-btn
+{
+    color:#fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home section starts */
+.home{
+  /*display: flex;
+ background:  url('c.png'),url('bg.jpg') center;
+ background-repeat: no-repeat,no-repeat;
+ background-size: 25% auto,cover;
+ background-position: 800px center,0px;
+                         background-attachment: fixed; 
+ height: 100vh;
+ font-family: 'Ubuntu',sans-serif;
+ color: #fff;
+ min-height: 500px;
+*/
+ display: flex;
+ background: url("bg.jpg") no-repeat center;
+ height: 100vh;
+ color: #fff;
+ min-height: 500px;
+ background-size: cover;
+ background-attachment: fixed;
+ font-family: 'Ubuntu', sans-serif; 
+}
+.home .max-width{
+    width: 100%;
+    display: flex;
+  }
+  .home .max-width .row{
+    margin-right: 0;
+  }
+
+.home .max-width .home-content .text-1
+{
+    font-size: 27px;
+    
+}
+.home .max-width .home-content .text-2
+{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .max-width .home-content .text-3
+{   font-size: 40px;
+    margin: 5px 0;
+}
+.home .max-width .home-content span
+{   color: crimson;
+    
+}
+
+/* responsive media query start */
+/* @media(max-width:750px)
+{ .home .max-width
+    {   
+        margin: auto 20px auto 414px;
+    } 
+    .home .max-width .home-content
+    {   
+        align-items: center;
+    } 
+    .home{
+        display: flex;
+        background:  url('c.png'),url('bg.jpg') center;
+        background-repeat: no-repeat,no-repeat;
+        background-size: 40% auto,cover;
+        background-position: center 140px,0px;
+                     /* background-attachment: fixed; 
+        height: 100vh;
+        font-family: 'Ubuntu',sans-serif;
+        color: #fff;
+        min-height: 500px;}
+
+        .home .max-width .home-content .text-1
+            {
+                font-size: 20px;
+                
+            }
+            .home .max-width .home-content .text-2
+            {
+                font-size: 30px;
+                font-weight: 480;
+                margin-left: -3px;
+            }
+            .home .max-width .home-content .text-3
+            {   font-size: 32px;
+                margin: 5px 0;
+            }
+} */
+
+/* @media(max-width:800px)
+{ .home .max-width
+    {   
+        margin: 700px auto auto auto;
+    } 
+} */
+@media(max-width:950px)
+{   
+    .max-width{
+        padding: 0 50px;
+    }
+
+    .menu-btn
+    {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+
+    .navbar .menu
+    {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background:#111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block
+    }
+    
+    .navbar .menu li a{
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+    }
+    
+    
+    
+}
