@@ -280,7 +280,7 @@ color: crimson;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
-    margin: 21px;
+    
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -447,6 +447,10 @@ color: crimson;
     .about .about-content .right
     { flex:100%;
     }
+    .services .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 
 @media(max-width:690px)
@@ -465,7 +469,9 @@ color: crimson;
         font-size:20px;
         padding:9px 25px ;
     }
-
+    .services .serv-content .card{
+        width: 100%;
+    }
 }
 
 @media(max-width:500px)
