@@ -189,7 +189,7 @@ section .title::after{
     font-size: 20px;
     color: crimson;
     padding: 5px;
-    background:#fff ;
+    background:#fbf9f9;
     transform: translateX(-50%);
 }
 /* about section starts */
@@ -280,6 +280,7 @@ color: crimson;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
+    margin: 21px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -392,6 +393,7 @@ color: crimson;
         width: 100%;
         left: -100%;
         top: 0;
+        height: 570px;
         background:#111;
         text-align: center;
         padding-top: 80px;
