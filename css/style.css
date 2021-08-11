@@ -161,7 +161,7 @@ section
     
 }
 
-.about, .services, .skills
+.about, .services, .skills, .teams
 {   
      /* margin: 0px 100px; */
     font-family: 'Poppins',"sans-serif";
@@ -263,17 +263,19 @@ color: crimson;
 }
 
 /* Education section starts */
-.services
+.services, .teams
 {   color: #fff;
     background: #111;
     /* margin: 0px 100px; */
     /* border-radius: 10px; */
 }
 
-.services .title::before{
+.services .title::before,
+.teams .title::before{
     background: #fff;
 }
-.services .title::after{
+.services .title::after,
+.teams .title::after{
     background: #111;
     content: "My Education";
 }
@@ -405,8 +407,36 @@ color: crimson;
   .skills .skills-content .right .CSS::before{
     width: 70%;
   }
-
-  
+/* teams section styling */
+.teams .title::after
+{
+    content: "Interests";
+}
+.teams .carousel .card
+{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+}
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.teams .carousel .card img{
+     height: 150px;
+     width: 150px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 5px solid crimson;
+}
 
 
 
@@ -589,4 +619,5 @@ color: crimson;
     {   font-size: 27px;
      
     }
+
 }
