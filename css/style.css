@@ -410,7 +410,7 @@ color: crimson;
 /* teams section styling */
 .teams .title::after
 {
-    content: "Interests";
+    content: "What I like";
 }
 .teams .carousel .card
 {
@@ -418,7 +418,13 @@ color: crimson;
     border-radius: 6px;
     padding: 25px 35px;
     text-align: center;
+    transition: all 0.3s ease;
 }
+.teams .carousel .card:hover
+{
+    background: #3e0e12;
+}
+
 .teams .carousel .card .box{
     display: flex;
     flex-direction: column;
@@ -428,20 +434,53 @@ color: crimson;
 .teams .carousel .card .text{
     font-size: 25px;
     font-weight: 500;
-    margin: 10px 0 7px 0;
+    margin: 10px 0 7px o;
 }
+.teams .carousel .card:hover .box{
+    transition: all 0.3s ease;
+}
+.teams .carousel .card:hover .box
+{
+    transform: scale(1.05);
+}
+
 .teams .carousel .card img{
      height: 150px;
      width: 150px;
      object-fit: cover;
      border-radius: 50%;
      border: 5px solid crimson;
+     background: crimson;
+}
+.teams .carousel .card:hover img{
+    border-color: #fff;
+    background: #fff;
+}
+.owl-dots
+{
+    text-align: center;
+    margin-top:20px;
+}
+.owl-dot
+{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;    
+}
+.owl-dot:hover
+{
+    background: crimson!important;
 }
 
-
-
-
-
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+    background: crimson!important;
+}
 
 /* responsive media query start */
 /* @media(max-width:750px)
