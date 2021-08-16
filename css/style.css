@@ -5,6 +5,10 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html
+{
+    scroll-behavior: smooth;
+}
 body{
     background:#fbf9f9 ;
 }
@@ -161,7 +165,7 @@ section
     
 }
 
-.about, .services, .skills, .teams, .contact
+.about, .services, .skills, .teams, .contact, footer
 {   
      /* margin: 0px 100px; */
     font-family: 'Poppins',"sans-serif";
@@ -597,11 +601,25 @@ color: crimson;
     background: none;
     color: crimson;
 }
+/* footer section stling */
+footer
+{
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a
+{
+    color: crimson;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
 
-
-
-
-
+footer span a:hover
+{
+    text-decoration: underline;
+}
 
 
 /* responsive media query start */
