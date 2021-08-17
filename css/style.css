@@ -124,7 +124,7 @@ body{
 */
  display: flex;
  background-image: url("tamil.png");
- background: url("bg3.jpg") no-repeat center;
+ background: url("bg.jpg") no-repeat center;
 
  height: 100vh;
  color: #fff;
@@ -746,7 +746,7 @@ footer span a:hover
     }
     .home
     {
-        background: url("bg3.jpg") no-repeat;
+        background: url("bg.jpg") no-repeat;
     }
     .home .home-content .text-2
     {
