@@ -5,7 +5,6 @@ $(document).ready(function(){
         }else{
             $('.navbar').removeClass("sticky")
         }
-        
         if(this.scrollY>500)
         {
             $('.scroll-up-btn').addClass("show")
@@ -32,14 +31,14 @@ $(document).ready(function(){
 
     // typing animation script
     var typed=new Typed(".typing",{
-        strings:["Student","Programmer","Web developer"],
+        strings:["Student","Programmer","Developer"],
         typeSpeed:100,
         backSpeed: 60,
         loop:true
     });
     //typing 2
     var typed=new Typed(".typing-2",{
-        strings:["Student","Programmer","Web developer"],
+        strings:["Student","Programmer","Developer"],
         typeSpeed:100,
         backSpeed: 60,
         loop:true
