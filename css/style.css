@@ -272,6 +272,7 @@ color: crimson;
 }
 .about .about-content .right p{
     text-align: justify;
+    font-size: 20px;
 }
 .about .about-content .right a{
     display: inline-block;
