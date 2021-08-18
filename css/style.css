@@ -57,10 +57,10 @@ body{
 .navbar .menu  li
 {
     list-style: none;
-    display: inline;
+    display: inline-block;
 }
 .navbar .menu  li a 
-{
+{   display:block;
     color: #fff;
     font-size: 18px;
     font-weight: 500;
@@ -86,26 +86,66 @@ body{
     display: none;
 }
 
+.scroll-up-btn
+{  position: fixed;
+    height: 45px;
+    width: 42px;
+   background: crimson;
+   right: 30px;
+   bottom: 30px;
+   border-radius: 6px;
+   text-align: center;
+   line-height: 45px;
+   color: #fff;
+   z-index: 9999;
+   font-size: 30px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events:none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show
+{   bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
 /* home section starts */
 .home{
-  
- 
+  /*display: flex;
+ background:  url('c.png'),url('bg.jpg') center;
+ background-repeat: no-repeat,no-repeat;
+ background-size: 25% auto,cover;
+ background-position: 800px center,0px;
+                         background-attachment: fixed; 
+ height: 100vh;
+ font-family: 'Ubuntu',sans-serif;
  color: #fff;
- background: url("bg5.jpg") no-repeat center;
- font-family: 'Ubuntu', sans-serif; 
+ min-height: 500px;
+*/
+ display: flex;
+ background-image: url("tamil.png");
+ background: url("bg.jpg") no-repeat center;
 
  height: 100vh;
+ color: #fff;
  min-height: 500px;
  background-size: cover;
  background-attachment: fixed;
- 
+ font-family: 'Ubuntu', sans-serif; 
 }
 
+.home .max-width{
+    width: 100%;
+    display: flex;
+    /* margin: auto 0 auto 40px; */
+  }
+  /* .home .max-width .row{
+    margin-right: 0;
+  } */
 
 .home .home-content .text-1
 {
     font-size: 27px;
-
     
 }
 .home .home-content .text-2
@@ -113,7 +153,6 @@ body{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
-
 }
 .home .home-content .text-3
 {   font-size: 40px;
@@ -135,32 +174,12 @@ body{
     border: 2px solid crimson;
     transition:all 0.3s ease;
 }
-.home .max-width{
-    width: 100%;
-    justify-content: center;
-    padding-top: 100px;  
-  }
+
 .home .max-width a:hover
 {  color: crimson;
     background: none;
 }
-.home .home-content .left
-{
-    width: 50%;
-    
-}
 
-.home .home-content .left img
-{
-   height: 350px;
- 
-}
-.home .home-content .right
-{ width: 50%;
-  padding-left: 57px;
- 
-}
-  
 
 /* similar content styling code */
 section
@@ -175,7 +194,6 @@ section
     font-family: 'Poppins',"sans-serif";
     /* background: #fbf9f9; */
 }
-.home .home-content,
 .about .about-content,
 .services .serv-content,
 .skills .skills-content,
@@ -268,7 +286,7 @@ color: crimson;
     transition:all 0.3s ease;
 }
 .about .about-content .right a:hover
-{   color: crimson;
+{  color: crimson;
     background: #fbf9f9;
 }
 
@@ -508,10 +526,13 @@ color: crimson;
  font-weight: 600;
  margin-bottom: 10px;
 }
-
 .contact .contact-content .right .text
 {
-     margin-bottom: 20px;
+ margin-bottom: 20px;
+}
+
+.contact .contact-content .left p
+{text-align: justify;
 }
 .contact .contact-content .left .icons
 {
@@ -541,6 +562,7 @@ color: crimson;
 {
    color: #333;
 }
+
 .contact .contact-content .row .info .sub-title a
 {
    color: #333;
@@ -689,21 +711,8 @@ footer span a:hover
        background: rgb(155, 154, 154);
        border-radius: 6px;}
 }
-@media(max-width:1165px)
+@media(max-width:1104px)
 {
-    .home .home-content .text-2
-    {
-        font-size: 60px;   
-    }
-    .home .home-content .right
-    { 
-     padding-left: 10px;
-    }
-    .home .home-content .left img
-    {
-    height: 300px;
-    
-    }
 }
 
 @media(max-width:947px)
@@ -729,7 +738,6 @@ footer span a:hover
         width: 100%;
         left: -100%;
         top: 0;
-        height: 570px;
         background:#111;
         text-align: center;
         padding-top: 80px;
@@ -750,35 +758,20 @@ footer span a:hover
     }
     .home
     {
-        background: url("bg3.jpg") no-repeat;
+        background: url("bg.jpg") no-repeat;
     }
     .home .home-content .text-2
     {
-        font-size: 60px;   
+        font-size: 70px;   
     }
     .home .home-content .text-3
-    {   font-size: 30px;
+    {   font-size: 35px;
      
     }
     .home .max-width a
     {  
-        font-size:20px;
-        padding:8px 24px ;
-    }
-    .home .home-content .left
-    {
-        width: 30%;
-        
-    }
-    
-    .home .home-content .left img
-    {
-    height: 250px;
-    }
-    .home .home-content .right
-    { width: 70%;
-    padding-left: 100px;
-    
+        font-size:23px;
+        padding:10px 30px ;
     }
     /* .max-width
     {
@@ -796,7 +789,6 @@ footer span a:hover
     }
     .about .about-content .right
     { flex:100%;
-      padding: 0%;
     }
     .services .serv-content .card{
         width: calc(50% - 10px);
@@ -808,37 +800,6 @@ footer span a:hover
         margin-bottom: 35px;
     }
   
-@media(max-width:775px)
-{    .home .max-width{
-        padding-top: 0px;
-    }
-    .home .home-content .column
-    { 
-        width: 50%;
-    }
-   
-    .home .home-content .left
-    {
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .home .home-content
-    {
-        position: relative;
-    }
-    .home .home-content .right
-    { flex:100%;
-        padding: 0px;
-        width: 355px;
-        
-        text-align: center;
-        margin:0;
-      
-    }
-    
-
-}
 
 @media(max-width:690px)
 {    
@@ -856,20 +817,6 @@ footer span a:hover
         font-size:20px;
         /* padding:9px 25px ; */
     }
-    .home .home-content .left
-    {
-        width: 30%;
-        
-    }
-
-    .home .home-content .left img
-    {
-    height: 180px;
-    
-    }
-    .home .home-content .right
-    { width: 70%;    
-    }
     .services .serv-content .card{
         width: 100%;
         /* margin-bottom: 20px; */
@@ -880,12 +827,12 @@ footer span a:hover
 {    
     .home .home-content .text-2
     {
-        font-size: 40px;
+        font-size: 44px;
         
     }
     .home .home-content .text-3
     {   font-size: 27px;
      
     }
-  
+
 }
