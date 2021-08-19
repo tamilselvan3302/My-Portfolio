@@ -557,7 +557,13 @@ color: crimson;
 {
     color: crimson;
    font-size: 25px;
+   transition: all 0.3s ease;
+   
 }
+.contact .contact-content .row i:hover
+{  
+    transform: scale(1.25);
+    }
 .contact .contact-content .row .info .head
 {
     font-weight: 500;
@@ -565,6 +571,7 @@ color: crimson;
 .contact .contact-content .row .info .sub-title
 {
    color: #333;
+   
 }
 
 .contact .contact-content .row .info .sub-title a
