@@ -5,7 +5,6 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
 html
 {
     scroll-behavior: smooth;
@@ -466,6 +465,9 @@ color: crimson;
     font-weight: 500;
     margin: 10px 0 7px o;
 }
+.teams .carousel .card p{
+    text-align: center;
+}
 .teams .carousel .card:hover .box{
     transition: all 0.3s ease;
 }
@@ -568,6 +570,8 @@ color: crimson;
 .contact .contact-content .row .info .sub-title a
 {
    color: #333;
+   transition: all 0.3s ease;
+}
 }
 .contact .contact-content .row .info .sub-title a:hover
 {
@@ -839,6 +843,7 @@ footer span a:hover
     .contact .contact-content .row .info .sub-title
     {
     color: #333;
+   
     }
 
 }
